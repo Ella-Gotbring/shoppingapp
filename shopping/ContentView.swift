@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var  dbConnection:DatabaseConnection
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+        
+        
+        if dbConnection.userLoggedIn {
+            NavigationView {
+                ShopView()
+                
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            } else {
+                NavigationView{
+                    LoginView()
+                }
+                .navigationViewStyle(StackNavigationViewStyle())
+            }
+        }
+        
+        
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(DatabaseConnection())
     }
 }
