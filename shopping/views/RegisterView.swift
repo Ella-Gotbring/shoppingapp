@@ -33,7 +33,14 @@ struct RegisterView: View {
         Button("register"){
            dbConnection.RegisterUser(email: email, password: password)
             print("register pressed")
+            
         }
+        .font(.headline)
+                   .foregroundColor(.white)
+                   .padding()
+                   .frame(width: UIScreen.main.bounds.width * 0.8)
+                   .background(Color.green)
+                   .cornerRadius(15.0)
         
         Button(action: {
             print("Go to login")
@@ -50,6 +57,10 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        //RegisterView()
+         RegisterView() .previewDevice("iPhone 8")
+         RegisterView() .previewDevice("iPhone 12 mini")
+         RegisterView() .previewDevice("iPod touch (7th generation)")
+
     }
 }

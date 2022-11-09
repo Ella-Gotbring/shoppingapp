@@ -24,16 +24,9 @@ struct LoginView: View {
            //     .resizable()
            //     .frame(width: 350, height: 300)
             Text("Email:")
-                
-          
             TextField("", text: $email).textFieldStyle(.roundedBorder)
-              
                 .padding()
             Text("Password:")
-                .padding()
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-                
             SecureField("", text: $password).textFieldStyle(.roundedBorder)
                 .padding()
         .padding()
@@ -46,7 +39,7 @@ struct LoginView: View {
         .font(.headline)
                    .foregroundColor(.white)
                    .padding()
-                   .frame(width: 220, height: 60)
+                   .frame(width: UIScreen.main.bounds.width * 0.8)
                    .background(Color.green)
                    .cornerRadius(15.0)
         
@@ -63,5 +56,9 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+       // LoginView() .previewDevice("iPhone 8")
+       // LoginView() .previewDevice("iPhone 12 mini")
+        //LoginView() .previewDevice("iPod touch (7th generation)")
+
     }
 }

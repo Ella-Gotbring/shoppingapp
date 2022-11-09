@@ -18,11 +18,13 @@ struct ContentView: View {
                 ShopView()
                 
             }
+          
             .navigationViewStyle(StackNavigationViewStyle())
             } else {
                 NavigationView{
                     LoginView()
                 }
+                
                 .navigationViewStyle(StackNavigationViewStyle())
             }
         }
@@ -33,5 +35,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environmentObject(DatabaseConnection())
+            .previewDevice("iPhone 11")
+        ContentView().environmentObject(DatabaseConnection())
+            .previewDevice("iPhone 13")
     }
 }

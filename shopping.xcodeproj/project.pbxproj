@@ -31,6 +31,8 @@
 		DE8168CC291989D200DB11BC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8168CB291989D200DB11BC /* Product.swift */; };
 		DE8168CE29198A3A00DB11BC /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8168CD29198A3A00DB11BC /* CartManager.swift */; };
 		DE8168D029198A7900DB11BC /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8168CF29198A7900DB11BC /* ProductCard.swift */; };
+		DE8168D2291993CA00DB11BC /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8168D1291993CA00DB11BC /* CartButton.swift */; };
+		DE8168D4291993DA00DB11BC /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8168D3291993DA00DB11BC /* ProductRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		DE8168CB291989D200DB11BC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DE8168CD29198A3A00DB11BC /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		DE8168CF29198A7900DB11BC /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		DE8168D1291993CA00DB11BC /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		DE8168D3291993DA00DB11BC /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,8 @@
 			children = (
 				DE48113529193FE600BCE15F /* TabBar.swift */,
 				DE8168CF29198A7900DB11BC /* ProductCard.swift */,
+				DE8168D1291993CA00DB11BC /* CartButton.swift */,
+				DE8168D3291993DA00DB11BC /* ProductRow.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -340,9 +346,11 @@
 			files = (
 				DE48113C2919426C00BCE15F /* DatabaseConnection.swift in Sources */,
 				DE8168CE29198A3A00DB11BC /* CartManager.swift in Sources */,
+				DE8168D4291993DA00DB11BC /* ProductRow.swift in Sources */,
 				DE48113029193FA500BCE15F /* LoginView.swift in Sources */,
 				DE48114D29194A6100BCE15F /* ProfileView.swift in Sources */,
 				DE8168D029198A7900DB11BC /* ProductCard.swift in Sources */,
+				DE8168D2291993CA00DB11BC /* CartButton.swift in Sources */,
 				DE4811382919400300BCE15F /* CartView.swift in Sources */,
 				DE48113229193FB000BCE15F /* RegisterView.swift in Sources */,
 				DE8168CC291989D200DB11BC /* Product.swift in Sources */,
