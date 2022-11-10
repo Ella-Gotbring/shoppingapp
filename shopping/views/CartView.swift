@@ -11,6 +11,7 @@ import SwiftUI
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
     
+    
     var body: some View {
         ScrollView {
             if cartManager.products.count > 0 {
@@ -32,25 +33,19 @@ struct CartView: View {
                // }
             
                 
-                NavigationLink(destination: ProfileView(), label: {
-                    Text("Pay nowww")
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 220, height: 60)
-                        .background(Color.green)
-                        .cornerRadius(15.0)
-                })
-            
-
                 
-             
+                Button(action: {
+                    print("pay now pressed")
+                }, label: {
+                    NavigationLink(destination: PaymentView()) {
+                         Text("Pay now")
+                     }
+                })
             } else{
                 Text("Your cart is empty")
                
-
             }
             
-           
         }
         .navigationTitle(Text("My shopping cart"))
         .navigationViewStyle(StackNavigationViewStyle())

@@ -39,7 +39,7 @@ struct RegisterView: View {
                    .foregroundColor(.white)
                    .padding()
                    .frame(width: UIScreen.main.bounds.width * 0.8)
-                   .background(Color.green)
+                   .background(Color(hue: 0.418, saturation: 0.829, brightness: 0.311))
                    .cornerRadius(15.0)
         
         Button(action: {

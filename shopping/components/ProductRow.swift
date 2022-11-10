@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct ProductRow: View {
+    
     @EnvironmentObject var cartManager: CartManager
      var product: Product
     
@@ -35,22 +36,7 @@ struct ProductRow: View {
             
             Spacer()
             
-            Button(action: {}) {
-                Image(systemName: "minus")
-                    .foregroundColor(.black)
-                    .font(.system(size: 16))
-            }
-            Text("\(product.quantity)")
-                .fontWeight(.heavy)
-                .foregroundColor(.black)
-                .padding(.vertical, 5)
-                .padding(.horizontal, 10)
-            
-            Button(action: {}) {
-                Image(systemName: "plus")
-                    .foregroundColor(.black)
-                    .font(.system(size: 16))
-            }
+    
             
          
             

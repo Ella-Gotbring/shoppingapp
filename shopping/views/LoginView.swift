@@ -20,9 +20,10 @@ struct LoginView: View {
             Text("Login").bold()
                 .padding()
             
-          //  Image("logo")
-           //     .resizable()
-           //     .frame(width: 350, height: 300)
+          // Image("logo")
+           //    .resizable()
+            //   .frame(width: 100, height: 100)
+            
             Text("Email:")
             TextField("", text: $email).textFieldStyle(.roundedBorder)
                 .padding()
@@ -40,7 +41,7 @@ struct LoginView: View {
                    .foregroundColor(.white)
                    .padding()
                    .frame(width: UIScreen.main.bounds.width * 0.8)
-                   .background(Color.green)
+                   .background(Color(hue: 0.418, saturation: 0.829, brightness: 0.311))
                    .cornerRadius(15.0)
         
         NavigationLink(destination: RegisterView(), label: {

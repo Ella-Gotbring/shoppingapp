@@ -26,6 +26,7 @@ struct ProductCard: View {
                     .bold()
                 Text("\(product.price)$" )
                     .font(.caption)
+                
             }
             .padding()
             .frame(width: 195, alignment: .leading)
@@ -33,19 +34,20 @@ struct ProductCard: View {
             .cornerRadius(15)
         }
         .frame(width: 180, height: 250)
-        .shadow(radius: 5)
+        .shadow(radius: 3)
             
             Button{
                 print("added product to cart")
                 cartManager.addToCart(product: product)
                 
             } label: {
-                Image(systemName: "plus")
+                Image(systemName: "cart.badge.plus")
                     .padding()
                     .foregroundColor(.white)
                     .background(.black)
                     .cornerRadius(50)
                     .padding()
+                   
                 
             }
     }

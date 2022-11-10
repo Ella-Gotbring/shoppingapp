@@ -14,35 +14,38 @@ struct CartButton: View {
     var numberofProducts: Int
     var body: some View {
         HStack{
-            HStack(spacing: 10){
-                
-               
-                Image(systemName: "cart")
-                
-                
-                    .padding(.top, 5)
-                    .padding()
-                if numberofProducts > 0{
-                    Text("\(numberofProducts)")
-                        .font(.caption2.bold())
-                        .foregroundColor(.white)
-                        .frame(width: 13, height: 13)
-                        .background(.red)
-                        .cornerRadius(50)
-                }
-                
-                    
-              
-            }
-            HStack(spacing: 20){
+            HStack(){
                 Button {
                     print("Sign out button was tapped")
                     dbConnection.SignOUt()
                 } label: {
-                  Text("logout")
-                    Label("Edit", systemImage: "rectangle.portrait.and.arrow.right")
+                    Label("Logout", systemImage: "rectangle.portrait.and.arrow.right")
                 }
-                .padding(5)
+                .padding(30)
+                .foregroundColor(.black)
+            }
+
+            ZStack(alignment: .topTrailing){
+                
+               
+                Image(systemName: "cart").imageScale(.large)
+                    .foregroundColor(.black)
+                    .padding(.top, 5)
+                
+                if numberofProducts > 0{
+                   
+                        
+                 Text("\(numberofProducts)")
+                        .font(.caption2.bold())
+                        .foregroundColor(.white)
+                        .frame(width: 15, height: 15)
+                        .background(.red)
+                        .cornerRadius(50)
+                }
+              
+                
+                    
+              
             }
         }
             

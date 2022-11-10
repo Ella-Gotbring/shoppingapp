@@ -7,24 +7,28 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct PayView: View {
     @State var username = ""
     @State var number = ""
     @State var ccv = ""
     @State var date = Date()
+    @State var street = ""
+    @State var post = ""
+    @State var zip = ""
+ 
     
     var body: some View {
        
         VStack{
-            Text("enter payment info")
-                .font(.headline.bold())
-   
             VStack(alignment: .leading) {
+                Text("enter payment info")
+                    .font(.headline.bold())
+                padding(10)
             
             Text("Name")
                 .font(.callout)
                 .bold()
-                .padding()
+              
             TextField("Enter name...", text: $username)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
@@ -50,19 +54,50 @@ struct ProfileView: View {
                          displayedComponents: [.date]
                             
                      )
+                }
+            Spacer()
+                Divider()
+                VStack{
                     
-                    
-                    
+               
+                Text("shipping adress")
+                    .font(.headline.bold())
+                
+                Text("Street name")
+                    .font(.callout)
+                    .bold()
+                  
+                TextField("Enter streetname...", text: $street)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                Text("Postcode")
+                    .font(.callout)
+                    .bold()
+                  
+                TextField("Enter name...", text: $post)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                Text("Zip")
+                    .font(.callout)
+                    .bold()
+                  
+                TextField("Enter name...", text: $zip)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+           
                 }
              
         }.padding()
                 .padding()
-            NavigationLink(destination: MapView(), label: {
+            NavigationLink(destination: OrderConfirmedView(), label: {
                 Text("Place order")
                     .foregroundColor(.white)
                     .padding()
-                    .frame(width: 220, height: 60)
-                    .background(Color.green)
+                    .frame(width: UIScreen.main.bounds.width * 0.8)
+                    .background(Color(hue: 0.552, saturation: 0.649, brightness: 0.778, opacity: 0.722))
                     .cornerRadius(15.0)
             })
             
@@ -70,8 +105,8 @@ struct ProfileView: View {
 }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct PayView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        PayView()
     }
 }
