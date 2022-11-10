@@ -35,12 +35,6 @@ struct ProductRow: View {
                 }
             
             Spacer()
-            
-    
-            
-         
-            
-            
         }
         .padding(.horizontal)
         .frame(maxWidth: .infinity, alignment: .leading)

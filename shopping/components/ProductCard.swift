@@ -12,7 +12,7 @@ struct ProductCard: View {
     @EnvironmentObject var cartManager: CartManager
     var product: Product
     var body: some View {
-        ZStack(alignment: .topTrailing) {
+        ZStack(alignment: .bottomTrailing) {
             
         ZStack(alignment: .bottom){
             Image(product.image)
@@ -29,7 +29,7 @@ struct ProductCard: View {
                 
             }
             .padding()
-            .frame(width: 195, alignment: .leading)
+            .frame(width: 195, height: 76, alignment: .leading)
             .background(.white)
             .cornerRadius(15)
         }
@@ -42,10 +42,11 @@ struct ProductCard: View {
                 
             } label: {
                 Image(systemName: "cart.badge.plus")
+                    .font(.system(size: 15))
                     .padding()
                     .foregroundColor(.white)
                     .background(.black)
-                    .cornerRadius(50)
+                    .cornerRadius(30)
                     .padding()
                    
                 

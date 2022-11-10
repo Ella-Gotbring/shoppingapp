@@ -10,24 +10,54 @@ import SwiftUI
 struct OrderConfirmedView: View {
     @State var email = ""
     var body: some View {
-        VStack{
-            Text("Thank you!").font(.largeTitle).bold()
-            
-                .padding(10)
-            
-            Text("A order confirmation has been sent out to your email. Since you're here, sign up to get discounts ")
-            
-            NavigationLink(destination: LoginView(), label: {
-                Text("back to login")
-            })
+            NavigationView {
 
-       
+                       VStack {
+
+                           NavigationLink(destination: LoginView()) {
+                               Text("Sign In")
+                           }
+
+                           LabelledDivider(label: "or")
+
+                           NavigationLink(destination: RegisterView()) {
+                               Text("Sign up")
+                           }
+
+                       }.padding()
+                  
+            }
+            .navigationBarBackButtonHidden(true)
     }
 }
+    struct LabelledDivider: View {
+
+        let label: String
+        let horizontalPadding: CGFloat
+        let color: Color
+
+        init(label: String, horizontalPadding: CGFloat = 20, color: Color = .gray) {
+            self.label = label
+            self.horizontalPadding = horizontalPadding
+            self.color = color
+        }
+
+        var body: some View {
+            HStack {
+                line
+                Text(label).foregroundColor(color)
+                line
+            }
+        }
+
+        var line: some View {
+            VStack { Divider().background(color) }.padding(horizontalPadding)
+        }
+    }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         OrderConfirmedView()
     }
 }
-}
+

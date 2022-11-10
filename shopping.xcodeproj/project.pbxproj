@@ -26,7 +26,6 @@
 		DE4811472919444E00BCE15F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DE4811462919444E00BCE15F /* FirebaseStorage */; };
 		DE4811492919449F00BCE15F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE4811482919449F00BCE15F /* GoogleService-Info.plist */; };
 		DE48114B29194A2700BCE15F /* OrderConfirmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE48114A29194A2700BCE15F /* OrderConfirmedView.swift */; };
-		DE48114D29194A6100BCE15F /* PayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE48114C29194A6100BCE15F /* PayView.swift */; };
 		DE8168CC291989D200DB11BC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8168CB291989D200DB11BC /* Product.swift */; };
 		DE8168CE29198A3A00DB11BC /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8168CD29198A3A00DB11BC /* CartManager.swift */; };
 		DE8168D029198A7900DB11BC /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8168CF29198A7900DB11BC /* ProductCard.swift */; };
@@ -70,7 +69,6 @@
 		DE48113B2919426C00BCE15F /* DatabaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
 		DE4811482919449F00BCE15F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE48114A29194A2700BCE15F /* OrderConfirmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmedView.swift; sourceTree = "<group>"; };
-		DE48114C29194A6100BCE15F /* PayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayView.swift; sourceTree = "<group>"; };
 		DE8168CB291989D200DB11BC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DE8168CD29198A3A00DB11BC /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		DE8168CF29198A7900DB11BC /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				DE48113329193FC800BCE15F /* ShopView.swift */,
 				DE4811372919400300BCE15F /* CartView.swift */,
 				DE48114A29194A2700BCE15F /* OrderConfirmedView.swift */,
-				DE48114C29194A6100BCE15F /* PayView.swift */,
 				DE8168D9291BF53C00DB11BC /* PaymentView.swift */,
 			);
 			path = views;
@@ -348,7 +345,6 @@
 				DE8168CE29198A3A00DB11BC /* CartManager.swift in Sources */,
 				DE8168D4291993DA00DB11BC /* ProductRow.swift in Sources */,
 				DE48113029193FA500BCE15F /* LoginView.swift in Sources */,
-				DE48114D29194A6100BCE15F /* PayView.swift in Sources */,
 				DE8168D029198A7900DB11BC /* ProductCard.swift in Sources */,
 				DE8168D2291993CA00DB11BC /* CartButton.swift in Sources */,
 				DE4811382919400300BCE15F /* CartView.swift in Sources */,

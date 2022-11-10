@@ -24,11 +24,13 @@ struct CartButton: View {
                 .padding(30)
                 .foregroundColor(.black)
             }
+            
+            
 
             ZStack(alignment: .topTrailing){
                 
                
-                Image(systemName: "cart").imageScale(.large)
+                Image(systemName: "cart.fill").imageScale(.large)
                     .foregroundColor(.black)
                     .padding(.top, 5)
                 
@@ -43,10 +45,9 @@ struct CartButton: View {
                         .cornerRadius(50)
                 }
               
-                
-                    
-              
             }
+            
+            
         }
             
         }

@@ -18,14 +18,17 @@ struct PaymentView: View {
         VStack(spacing: 30) {
             Text("enter payment info").bold()
             Text("Card name")
+                .padding()
             TextField("", text: $name).textFieldStyle(.roundedBorder)
                 .padding()
             Text("Card number")
-            SecureField("", text: $number).textFieldStyle(.roundedBorder)
+                .padding()
+            TextField("", text: $number).textFieldStyle(.roundedBorder)
                 .padding()
             HStack(spacing: 30){
                 Text("CCV")
-                SecureField("", text: $ccv).textFieldStyle(.roundedBorder)
+                    .padding()
+                TextField("", text: $ccv).textFieldStyle(.roundedBorder)
                     .fixedSize()
                     .padding()
                 DatePicker(

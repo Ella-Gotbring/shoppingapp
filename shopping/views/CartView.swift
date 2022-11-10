@@ -20,6 +20,7 @@ struct CartView: View {
                 }
                 
                 HStack {
+                    Divider()
                     Text("Your cart total is")
                     Spacer()
                     Text("$\(cartManager.total).00")
@@ -42,12 +43,12 @@ struct CartView: View {
                      }
                 })
             } else{
-                Text("Your cart is empty")
+                Text("No items in cart")
                
             }
             
         }
-        .navigationTitle(Text("My shopping cart"))
+        .navigationTitle(Text("Shopping cart"))
         .navigationViewStyle(StackNavigationViewStyle())
     }
        
