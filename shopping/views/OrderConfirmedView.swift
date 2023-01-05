@@ -8,54 +8,87 @@
 import SwiftUI
 
 struct OrderConfirmedView: View {
-    @State var email = ""
-    var body: some View {
-            NavigationView {
-
-                       VStack {
-
-                           NavigationLink(destination: LoginView()) {
-                               Text("Sign In")
-                           }
-
-                           LabelledDivider(label: "or")
-
-                           NavigationLink(destination: RegisterView()) {
-                               Text("Sign up")
-                           }
-
-                       }.padding()
-                  
-            }
-            .navigationBarBackButtonHidden(true)
-    }
-}
-    struct LabelledDivider: View {
-
-        let label: String
-        let horizontalPadding: CGFloat
-        let color: Color
-
-        init(label: String, horizontalPadding: CGFloat = 20, color: Color = .gray) {
-            self.label = label
-            self.horizontalPadding = horizontalPadding
-            self.color = color
-        }
-
+    
+        @ObservedObject var model = ViewModel()
+        
+        @State var name = ""
+        @State var notes = ""
+        
         var body: some View {
-            HStack {
-                line
-                Text(label).foregroundColor(color)
-                line
+            
+            
+            
+            VStack {
+                
+                Text("christmas wishlist")
+                
+                List (model.list) { item in
+                    
+                    HStack {
+                        Text(item.name)
+                        Spacer()
+                        
+                        // Update button
+                        Button(action: {
+                            
+                            // Delete 
+                            model.updateData(todoToUpdate: item)
+                        }, label: {
+                            Image(systemName: "pencil")
+                        })
+                        .buttonStyle(BorderlessButtonStyle())
+                        
+                        
+                        // Delete button
+                        Button(action: {
+                            
+                            // Delete
+                            model.deleteData(todoToDelete: item)
+                        }, label: {
+                            Image(systemName: "minus")
+                        })
+                        .buttonStyle(BorderlessButtonStyle())
+                        
+                    }
+                }
+                
+             
+                
+                VStack(spacing: 8) {
+                    
+                    TextField("Name", text: $name)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    TextField("Price", text: $notes)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    Button(action: {
+                        
+                        // Call add data
+                        model.addData(name: name, notes: notes)
+                        
+                        // Clear the text fields
+                        name = ""
+                        notes = ""
+                        
+                    }, label: {
+                        Text("Add Wishlist Item")
+                            .foregroundColor(.black)
+                    })
+                    
+                }
+                .padding()
+                
             }
+            
+            
         }
-
-        var line: some View {
-            VStack { Divider().background(color) }.padding(horizontalPadding)
+        
+        init() {
+            model.getData()
         }
     }
-
-struct MapView_Previews: PreviewProvider {
+struct OrderConfirmedView_Previews: PreviewProvider {
     static var previews: some View {
         OrderConfirmedView()
     }

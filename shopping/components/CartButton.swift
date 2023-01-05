@@ -15,14 +15,27 @@ struct CartButton: View {
     var body: some View {
         HStack{
             HStack(){
+            
+            
+            
                 Button {
                     print("Sign out button was tapped")
                     dbConnection.SignOUt()
                 } label: {
                     Label("Logout", systemImage: "rectangle.portrait.and.arrow.right")
                 }
-                .padding(30)
+                .padding()
                 .foregroundColor(.black)
+                
+                NavigationLink(destination: OrderConfirmedView(), label: {
+                    Text("wishlist")
+                        .foregroundColor(.black)
+                })
+                Image(systemName: "pencil").imageScale(.large)
+                    .foregroundColor(.black)
+                    .padding(.top, 5)
+                
+          
             }
             
             
@@ -34,24 +47,25 @@ struct CartButton: View {
                     .foregroundColor(.black)
                     .padding(.top, 5)
                 
-                if numberofProducts > 0{
+                if numberofProducts > 0 {
                    
                         
                  Text("\(numberofProducts)")
                         .font(.caption2.bold())
                         .foregroundColor(.white)
-                        .frame(width: 15, height: 15)
+                        .frame(width: 18, height: 18)
                         .background(.red)
                         .cornerRadius(50)
                 }
-              
-            }
             
+                
+               
             
         }
             
         }
   
+}
 }
 
 struct CartButton_Previews: PreviewProvider {

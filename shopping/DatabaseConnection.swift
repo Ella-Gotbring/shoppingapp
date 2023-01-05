@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestoreSwift
 
 class DatabaseConnection: ObservableObject{
    private var db = Firestore.firestore()
@@ -14,6 +15,7 @@ class DatabaseConnection: ObservableObject{
     //lyssna på förändringarna live och använda oss av de
     @Published var currentUser: User?
     @Published var userLoggedIn = false
+    
     
     //har det skett en förändring i min inlogg status? init funktionen körs
     //init körs när databaseconnection skapas
@@ -39,7 +41,8 @@ class DatabaseConnection: ObservableObject{
             
         }
         }
-        
+    
+            
     func SignOUt() {
         do {
         try Auth.auth().signOut()

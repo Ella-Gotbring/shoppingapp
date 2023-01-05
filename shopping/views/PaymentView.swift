@@ -43,7 +43,7 @@ struct PaymentView: View {
             
             
      
-                NavigationLink(destination: OrderConfirmedView().navigationBarBackButtonHidden(true), label: {
+                NavigationLink(destination: ConfirmedView().navigationBarBackButtonHidden(true), label: {
                     Text("Place order")
                         .foregroundColor(.white)
                         .padding()

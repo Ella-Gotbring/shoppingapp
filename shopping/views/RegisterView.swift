@@ -39,15 +39,14 @@ struct RegisterView: View {
                    .foregroundColor(.white)
                    .padding()
                    .frame(width: UIScreen.main.bounds.width * 0.8)
-                   .background(Color(hue: 0.418, saturation: 0.829, brightness: 0.311))
+                   .background(Color(hue: 0.418,
+                                     saturation: 0.829, brightness: 0.311))
                    .cornerRadius(15.0)
-        
-        Button(action: {
-            print("Go to login")
-        }, label: {
-            Text("Already have an account? Login").foregroundColor(.black
-            ).bold()
-        })
+            
+            NavigationLink(destination: LoginView(), label: {
+                Text("login to your account")
+            })
+            
         .padding()
  
     }

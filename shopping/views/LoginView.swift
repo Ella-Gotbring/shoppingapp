@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
+
 
 struct LoginView: View {
     
@@ -13,6 +15,8 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
   
+   // @State var user = User()
+        var db = Firestore.firestore()
     
     var body: some View {
     
